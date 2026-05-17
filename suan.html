@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO配置 -->
+    <title>一口白酸兴黔乡-ONEBITEWHITESOUR</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- 引入公共CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft Yahei", SimSun, serif;}
+        html,body {width: 100%; background: #f8f5f0; color: #333;}
+        a {text-decoration: none; color: inherit;}
+        ul,li {list-style: none;}
+        .ell-rows-2 {display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+        .ell-rows-3 {display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+        .font20 {font-size: 20px;}
+        .fl {float: left;}
+        .fr {float: right;}
+        .clearfix:after {content: ""; display: block; clear: both;}
+
+            #nav-container {width: 100%; height: 80px; background: #1A3D2F; color: #fff; line-height: 80px; text-align: center; font-size: 24px; font-weight: bold;}
+        /* 首页轮播区域 */
+        .video-sy-w {overflow: hidden; width: 100%; height: 500px; position: relative;}
+        .bg-mask {position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3);}
+        .video-mask {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+        .index-video-info {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; text-align: center; z-index: 9;}
+        .index-video-info h1 {font-size: 42px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);}
+        .index-video-info p {font-size: 20px; margin-top:15px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5);}
+        .change-box {width: 100%; height: 100%;}
+        .change-box img {width: 100%; height: 100%; object-fit: cover;}
+        /* 产品轮播 */
+        .child-category {width: 1200px; margin: 60px auto;}
+        .product-category {width: 1200px; margin: 0 auto 20px; display: flex; gap: 20px;}
+        .product-category li {padding: 8px 20px; border: 1px solid #e63946; cursor: pointer; border-radius: 4px;}
+        .product-category li.current {background: #e63946; color: #fff;}
+        .swiper-slide {width: 300px; text-align: center;}
+        .goods-img img {width: 100%; height: 240px; object-fit: cover; border-radius: 8px;}
+
+        /* ========== 手风琴样式（点击展开板块） ========== */
+        article {width: 1200px; margin: 60px auto; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+        .accordion-item {margin-bottom: 15px; border: 1px solid #eee; border-radius: 8px; overflow: hidden;}
+        .accordion-title {
+            background: #f8f8f8;
+            padding: 18px 20px;
+            font-size: 20px;
+            color: #e63946;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-title::after {
+            content: "+";
+            font-size: 24px;
+            transition: 0.3s;
+        }
+        .accordion-title.active::after {
+            transform: rotate(45deg);
+        }
+        .accordion-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .accordion-content.show {
+            padding: 20px;
+            max-height: 1000px;
+        }
+        article p {line-height: 1.8; font-size: 16px; color: #444; margin-bottom: 15px;}
+        .art-img {width: 100%; margin: 20px 0; border-radius: 8px; overflow: hidden; text-align: center;}
+        .art-img img {max-width: 100%; height: auto; border-radius: 8px;}
+
+        /* 其他模块 */
+        #water-origin {width: 1200px; margin: 40px auto; padding: 30px; background: #fff; border-radius: 8px;}
+        .waterCurve {margin-top: 20px;}
+        .news-box {width: 1200px; margin: 60px auto;}
+        .news-list .news {padding: 20px; border-bottom: 1px solid #eee; display: flex; gap: 20px; background: #fff; border-radius: 8px; margin-bottom:15px;}
+        .media-img img {width: 160px; height: 100px; object-fit: cover; border-radius:6px;}
+        /* 底部 */
+        #foot {width: 100%; height: 120px; background: #333; color: #aaa; text-align: center; line-height: 120px; margin-top: 80px;}
+    </style>
+</head>
+<body>
+    <noscript><strong>很抱歉，如果没有启用JavaScript，此项目将无法正常运行。</strong></noscript>
+
+    <!-- 导航 -->
+    <div id="nav-container">一口白酸兴黔乡-ONEBITEWHITESOUR</div>
+
+    <!-- 首页轮播区域 -->
+    <div class="video-sy-w">
+        <div class="bg-mask noieobj"></div>
+        <div class="index-video-info">
+            <h1>百年苗家发酵智慧 · 正宗贵州白酸汤</h1>
+            <p>30-45天陶罐自然发酵 | pH3.8-4.2 | 活性乳酸菌</p>
+        </div>
+        <div class="change-box">
+            <ul>
+                <li>
+                    <img src="主页.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 产品分类 + 轮播 -->
+    <div class="child-category">
+        <ul class="product-category"></ul>
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 点击展开的5大板块 ========== -->
+    <article>
+        <!-- 1 -->
+        <div class="accordion-item">
+            <div class="accordion-title">白酸非遗的传播与坚守</div>
+            <div class="accordion-content">
+                <p>贵州白酸汤拥有百年非遗发酵技艺，承载黔地饮食文化，兼具食用与文化价值。如今传统手作技艺日渐式微，面临传承断层危机，我们以创新赋能非遗活化，守护乡土文脉，助力乡村文化振兴。</p>
+                <div class="art-img"><img src="白酸非遗的传承与坚守.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="accordion-item">
+            <div class="accordion-title">团队和启发</div>
+            <div class="accordion-content">
+                <p>我们团队深耕贵州乡土，发现本土白酸汤为酸汤本源，却鲜为人知。团队致力于打造健康便携的白酸汤产品，以匠心赋能乡土好物，助力黔乡振兴。</p>
+                <div class="art-img"><img src="团队和启发.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="accordion-item">
+            <div class="accordion-title">天然原料是我们的根基</div>
+            <div class="accordion-content">
+                <p>我们坚守天然、健康理念，选用黔南都匀、黔东南凯里本土原生态香禾糯谷物鲜椒，直采农户原料，零添加人工成分，以乡土好物助力乡村振兴。</p>
+                <div class="art-img"><img src="天然原材料是我们的根基.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accordion-item">
+            <div class="accordion-title">乡村产业的探索</div>
+            <div class="accordion-content">
+                <p>一口白酸兴黔乡项目持续联动黔乡农户，在贵州本土产地建立特色酸汤原料种植基地，以技术赋能、品质管控助力产业升级，赋能乡村振兴。</p>
+                <div class="art-img"><img src="乡村产业的探索.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="accordion-item">
+            <div class="accordion-title">白酸健康知识</div>
+            <div class="accordion-content">
+                <p>白酸汤经天然微生物发酵，富含活性乳酸菌与有机酸，可调节肠道菌群、促进消化吸收。其天然低钠低脂，能补充膳食有益物质，助力改善脾胃功能，温和守护人体健康。</p>
+                <div class="art-img"><img src="白酸健康知识.jpg" alt=""></div>
+            </div>
+        </div>
+    </article>
+
+    <!-- 页脚 -->
+    <div id="foot">
+        <p>© 2026 黔韵酸汤 | 传承非遗技艺 · 弘扬贵州味道</p>
+        <p>联系我们：电话.地址.邮箱.小程序.公众号</p>
+    </div>
+
+<script>
+    // ========== 点击展开/收起功能 ==========
+    $(function(){
+        $('.accordion-title').click(function(){
+            $(this).toggleClass('active');
+            $(this).next('.accordion-content').toggleClass('show');
+        });
+
+        // 原有功能保留
+        initCategoryList();
+        loadVideoList();
+        loadNewsList();
+
+        $(document).on("click", ".product-category li", function () {
+            const obj = $(this);
+            const index = parseInt(obj.data("index"));
+            obj.siblings().removeClass("current").find("span").hide();
+            obj.addClass("current").find("span").show();
+            setProductSwiper(categoryList[index].products);
+        });
+    });
+
+    // ========== 原有功能 ==========
+    var swiper3 = null;
+    var categoryList = [];
+    var videoList = [];
+
+    function setProductSwiper(products) {
+        swiper3 && swiper3.destroy();
+        let htmlStr = "";
+        products.map(function (item) {
+            htmlStr += `<div class="swiper-slide"><a><div class="slide-box-item"><div class="goods-img"><img src="${item.img_url.url}"></div><div>${item.secondary_name}</div></div></a></div>`;
+        });
+        $(".child-category .swiper-wrapper").html(htmlStr);
+        if (products.length > 3) {
+            swiper3 = new Swiper('.swiper', {slidesPerView: 3, spaceBetween: 20, loop: true});
+        }
+    }
+
+    function setCategoryNav(list) {
+        let htmlStr = "";
+        list.map(function (item, index) {
+            const curClass = index === 0 ? "current" : "";
+            htmlStr += `<li data-index="${index}" class="${curClass}"><span class="num">${index+1 <10 ? "0"+(index+1) : index+1}</span>${item.category_name}</li>`;
+        });
+        $(".product-category").html(htmlStr);
+    }
+
+    function loadVideoList() {
+        const data = {data:[{poster_pc:[{url:"https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/3213220339944048939.jpeg"}],name:"黔韵白酸汤·百年发酵"}]};
+        videoList = data.data;
+    }
+
+    function loadNewsList() {
+        const newslist = {data:[{id:1,list_img_url:{url:"https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/3131303431364041940.jpeg"},reported_at_string:"2026-05-14",title:"黔韵白酸汤入选贵州非遗美食名录",subtitle:"传统发酵技艺得到官方认证，助力乡村特色产业发展"},{id:2,list_img_url:{url:"https://p3-flow-image-sign.byteimg.com/tos-cn-i-a9rns2rl98/3214313231364044941.jpeg"},reported_at_string:"2026-05-10",title:"30天自然发酵，揭秘白酸汤的微生物奥秘",subtitle:"活性乳酸菌造就清爽柔和的正宗苗家风味"}]};
+        $(".news-list").html("");
+        $.each(newslist.data, function (i, item) {
+            $(".news-list").append(`<div class="news"><a><div class="media-img"><img src="${item.list_img_url.url}"></div></a><div><a><div class="title ell-rows-2 font20">${item.title}</div></a><div class="content ell-rows-3 font20">${item.subtitle}</div><div class="clearfix"><span class="fl font20">${item.reported_at_string}</span><a class="fr font20">阅读详情</a></div></div></div>`);
+        });
+    }
+</script>
+</body>
+</html>
